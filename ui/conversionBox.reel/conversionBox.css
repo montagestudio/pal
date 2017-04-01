@@ -1,0 +1,81 @@
+.toggleSwitch{
+    /*css for montage/checkbox which is broken*/
+   /* width:15px;
+    height:15px;
+    border-radius:3px;
+    background:white;
+    border:1px solid black;
+    display:inline-block;*/
+}
+
+.toggleSwitch.digit-ToggleSwitch {
+    height:20px;
+    width:30px;
+    vertical-align: top;
+}
+
+.toggleSwitch > .digit-ToggleSwitch-thumb {
+    width:20px;
+}
+
+.toggleSwitch.montage-ToggleSwitch--checked {
+    background: rgb(100, 189, 99);
+    border-color: rgb(100, 189, 99);
+}
+
+.toggleSwitch.montage-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
+    transform: translate3d(46%,0,0);
+}
+
+.conversionBox {
+    position:relative;
+    backface-visibility:visible;
+}
+
+.icon.boxflag {
+    width:300px;
+    height:180px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:.8;
+    vertical-align: top;
+    margin-top:0;
+    z-index:900;
+    transform-origin:0% 0%;
+    transform:scale(.5);
+    iimage-rendering: -webkit-optimize-contrast;
+
+}
+
+
+.boxcoin {
+    width:180px;
+    height:180px;
+    top:0px;
+    padding-left:60px;
+    padding-right:60px;
+    left:0px;
+    iimage-rendering: -webkit-optimize-contrast;
+    cursor:pointer;
+    user-select:none;
+    position:absolute;
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform:translate(-75px, -45px) scale(.3);
+    -webkit-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.6);
+    ibackground-image:url(../../assets/images/coin_back.jpg);
+    ibackground-size:cover;
+    opacity:.0;
+    z-index:1000;
+
+}
+
+.boxcoin:hover {
+    opacity:1.0;
+    -webkit-transform:translate(-75px, -45px) scale(.65);
+}
+.icon.boxflag:hover {
+
+}
+
+

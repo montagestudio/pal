@@ -1,0 +1,59 @@
+
+input[type=text] {
+    -webkit-appearance: var(--mon-text-appearance);
+    height: calc( var(--mon-form-ui-text-font-size) + 12px);
+    font-size: var(--mon-form-ui-text-font-size);
+    padding-left:4px;
+    padding-right:4px;
+
+    background:var(--mon-text-background);
+    border-width: var(--mon-text-border-width);
+    border-style: var(--mon-text-border-style);
+    border-color: var(--mon-text-border-color);
+    border-image:initial;
+    color: var(--mon-text-color);
+    min-width:60px;
+
+    border-radius: var(--mon-text-border-radius);
+
+    border-top-color: var(--mon-text-border-top-color);
+    border-right-color: var(--mon-text-border-right-color);
+    border-bottom-color: var(--mon-text-border-bottom-color);
+    border-left-color: var(--mon-text-border-left-color);
+
+    border-top-style: var(--mon-text-border-top-style);
+    border-right-style: var(--mon-text-border-right-style);
+    border-bottom-style: var(--mon-text-border-bottom-style);
+    border-left-style: var(--mon-text-border-left-style);
+
+    border-top-width: var(--mon-text-border-top-width);
+    border-right-width: var(--mon-text-border-right-width);
+    border-bottom-width: var(--mon-text-border-bottom-width);
+    border-left-width: var(--mon-text-border-left-width);
+
+    outline:none;
+    box-shadow: none;
+    box-sizing:border-box;
+}
+
+input[type=text]:focus {
+    x-webkit-appearance:none;
+    xborder:var(--form_focus_border);
+    outline: var(--mon-focus-outline);
+    box-shadow: var(--mon-focus-shadow);
+
+
+}
+
+.textfield {
+    flex-grow:1;
+    width:auto;
+    flex-basis:300;
+
+}
+
+.textfield.wide {
+
+    width:100%;
+
+}

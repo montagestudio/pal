@@ -1,0 +1,11 @@
+
+select {
+    border-radius:var(--form-editor-radius);
+
+}
+
+select:focus {
+    outline:none;
+    box-shadow: var(--form_focus_shadow);
+
+}

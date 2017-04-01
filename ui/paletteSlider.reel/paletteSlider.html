@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>PaletteSlider</title>
+
+    <link rel="stylesheet" type="text/css" href="paletteSlider.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik+One|Heebo:400,800,900' rel='stylesheet' type='text/css'>
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "paletteSlider"}
+                }
+            },
+            "paletteSlider1": {
+                "prototype": "montage/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "paletteSlider1"}
+                }
+            },
+            "paletteSlider2a": {
+                "prototype": "montage/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "paletteSlider2a"}
+                }
+            },
+            "paletteSlider2b": {
+                "prototype": "montage/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "paletteSlider2b"}
+                }
+            },
+            "paletteSlider2c": {
+                "prototype": "montage/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "paletteSlider2c"}
+                }
+            },
+            "slider": {
+				"prototype": "montage/ui/slider.reel",
+				"properties": {
+					"element": {"#": "slider"},
+					"thumbElement": {"#": "sliderThumb"},
+					"values": [],
+					"min":0,
+					"max":180
+				},
+				"bindings": {
+					"values.0": {"<->": "@sliderFieldMin.value"},
+					"values.1": {"<->": "@sliderFieldMid.value"},
+					"values.2": {"<->": "@sliderFieldMax.value"}
+				}
+
+            },
+            "sliderFieldMin": {
+				"prototype": "montage/ui/text-field.reel",
+				"properties": {
+					"element": {"#": "slider-field-min"},
+					"value": 10
+				}
+			},
+			"sliderFieldMid": {
+				"prototype": "montage/ui/text-field.reel",
+				"properties": {
+					"element": {"#": "slider-field-mid"},
+					"value": 75
+				}
+			},
+			"sliderFieldMax": {
+				"prototype": "montage/ui/text-field.reel",
+				"properties": {
+					"element": {"#": "slider-field-max"},
+					"value": 120
+				}
+			},
+
+			"sliderWithBareKnob": {
+				"prototype": "montage/ui/slider.reel",
+				"properties": {
+					"element": {"#": "sliderWithBareKnob"},
+					"step": 10,
+					"min":0,
+					"max":100
+				}
+            },
+            "sliderWithStickyLabel": {
+				"prototype": "montage/ui/slider.reel",
+				"properties": {
+					"element": {"#": "sliderWithStickyLabel"},
+					"values":[600,800],
+					"min":0,
+					"max":1000
+				}
+			},
+
+			"stickyThumbLabel": {
+				"prototype": "montage/ui/text.reel",
+				"properties":{
+					"element": {"#": "stickyThumbLabel"}
+				},
+				"bindings": {
+					"value": {"<-": "@sliderWithStickyLabel.values[0].round()"}
+				}
+			},
+
+			"stickyThumbLabel2": {
+				"prototype": "montage/ui/text.reel",
+				"properties":{
+					"element": {"#": "stickyThumbLabel2"}
+				},
+				"bindings": {
+					"value": {"<-": "@sliderWithStickyLabel.values[1].round()"}
+				}
+			}
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="paletteSlider" class="palette_group">
+
+        <div class="palette_title">SLIDERS</div>
+
+        <div class="palette_row">
+			 <label class="palette_cell" >
+				 <div class='palette_text'>Native Slider:</div><input type="range"    xtab-index="0" min="0.0" max="100.0"  value="30" steps="10"/>
+			 </label>
+        </div>
+
+        <div class="palette_row full">
+			 <label class="palette_cell slider grow" >
+				 <div class='palette_text'>Slider 1:</div><input type="range" data-montage-id="paletteSlider1" tab-index="0" min="0.0" max="100.0"  value="30" steps="10"/>
+			 </label>
+        </div>
+
+        <div class="palette_row full">
+			 <label class="palette_cell slider grow" >
+				 <div class='palette_text'>Slider 2a:</div><input type="range" data-montage-id="paletteSlider2a"  tab-index="0" min="0.0" max="100.0"  value="30" steps="10"/>
+			 </label>
+			 <label class="palette_cell  slider grow" ionmousedown="this.childNodes[2].focus()">
+				 <div class='palette_text'>Slider 2b:</div><input type="range" data-montage-id="paletteSlider2b"  tab-index="0" min="0.0" max="100.0"  value="30" steps="10"/>
+			 </label>
+			 <label class="palette_cell  slider grow" ionmousedown="this.childNodes[2].focus()">
+				 <div class='palette_text'>Slider 2c:</div><input type="range" data-montage-id="paletteSlider2c"  tab-index="0" min="0.0" max="100.0"  value="30" steps="10"/>
+			 </label>
+        </div>
+
+		<div class="palette_row full">
+			 <label class="palette_cell  grow" for="fred">
+				 <div class='palette_text'>Slider with Bare Knob:</div>
+				 <div  class="slider-container">
+					 <div  data-montage-id="sliderWithBareKnob" class="slider sliderWithBareKnob">
+						 <div id="fred" class="slider-thumb"></div>
+					 </div>
+                 </div>
+			 </label>
+		</div>
+
+
+
+        <div class="palette_row full">
+			 <div class="palette_cell grow" >
+				 <div class='palette_text'>Slider:</div>
+				 <div class="slider-container">
+					<div data-montage-id="slider" class="slider A">
+						<div data-montage-id="sliderThumb" class="slider-thumb A"></div>
+						<div data-montage-id="sliderThumb" class="slider-thumb B"></div>
+						<div data-montage-id="sliderThumb" class="slider-thumb C"></div>
+					</div>
+				 </div>
+				 <div class="iinput-text" style='margin-top:10px;'>
+					 <input type="text" data-montage-id="slider-field-min" class="input-text" style='width:30%'>
+					 <input type="text" data-montage-id="slider-field-mid" class="input-text" style='width:30%'>
+					 <input type="text" data-montage-id="slider-field-max" class="input-text" style='width:30%'>
+				 </div>
+			 </div>
+        </div>
+
+
+
+        <div class="palette_row full">
+			 <div class="palette_cell grow" >
+				 <div class='palette_text'>Slider:</div>
+
+				 <div class="slider-container" style="height:60px;">
+				    <div style='' class="ticks"></div>
+					<div data-montage-id="sliderWithStickyLabel" class="slider A sliderWithStickyLabel">
+						<div class="slider-thumb-contents">
+							<div data-montage-id="sliderThumb" class="slider-thumb  montage-Slider--thumb">
+							</div>
+							<h5 data-montage-id="stickyThumbLabel" class="stickyThumbLabel"></h5>
+						</div>
+						<div class="slider-thumb-contents" >
+							<div data-montage-id="sliderThumb2" class="slider-thumb montage-Slider--thumb">
+							</div>
+							<h5 data-montage-id="stickyThumbLabel2" class="stickyThumbLabel"></h5>
+						</div>
+					</div>
+				</div>
+
+
+
+			 </div>
+        </div>
+
+
+
+
+
+
+
+	</div>
+</body>
+</html>

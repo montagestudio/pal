@@ -1,0 +1,300 @@
+.palette_group {
+    box-sizing:border-box;
+    width:calc(100% - 0px);
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left:1px;
+    padding-right:1px;
+    background-color: var(--mon-form-group-background-color);
+    text-align:left;
+    border:var(--mon-form-group-outer-border);
+    border-top:0;
+    border-bottom:var(--mon-form-group-border);
+    display:table;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:row;
+    flex-wrap:wrap;
+
+}
+
+.palette_group:first-child {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-top:var(--mon-form-group-outer-border);
+}
+
+.palette_group:last-child {
+    border-bottom:var(--mon-form-group-outer-border);
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.palette_group[data-cw="phone_port"] {
+    border-radius:0;
+    border-left:0px;
+    border-right:0px;
+}
+
+.palette_row {
+    box-sizing:border-box;
+    width:calc(100% - 0px);
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:2px;
+    padding-right:2px;
+    text-align:left;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:row;
+    flex-wrap:wrap;
+
+}
+
+.palette_row.full {
+    display:flex;
+    justify-content:space-between;
+
+}
+
+.palette_row.fullcenter {
+    display:flex;
+    justify-content:space-around;
+
+}
+
+.palette_row.center {
+    display:flex;
+    justify-content:center;
+
+}
+.palette_row.right {
+    display:flex;
+    justify-content:flex-end;
+
+}
+.palette_row.left {
+    display:flex;
+    justify-content:flex-start;
+
+}
+
+xsvg {
+    color:purple;
+}
+
+.palette_cell {
+    width:auto;
+    padding-left:var(--mon-form-cell-padding-left);
+    padding-right:var(--mon-form-cell-padding-right);
+    padding-top:var(--mon-form-cell-padding-top);
+    padding-bottom:var(--mon-form-cell-padding-bottom);
+    box-sizing:border-box;
+    imargin-left:auto;
+    imargin-right:auto;
+    display:table-cell;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:row;
+    flex-wrap:wrap;
+    position:relative;
+
+
+}
+
+.palette_cell.grow {
+    flex-grow:1;
+
+}
+
+.palette_cell.full {
+    flex-grow:1;
+    width:100%;
+    display:table-row;
+
+}
+.palette_cell.plain {
+    margin:0;
+    padding:0;
+
+}
+.palette_cell[data-cw="phone_port"] {
+    padding-left:var(--mon-form-cell-mobile-padding-left);
+    padding-right:var(--mon-form-cell-mobile-padding-right);
+    padding-top:var(--mon-form-cell-mobile-padding-top);
+    padding-bottom:var(--mon-form-cell-mobile-padding-bottom);
+
+
+}
+
+.palette_cell:hover {
+    cursor:pointer;
+}
+
+.palette_cell:hover::after {
+    ibackground-color:var(--mon-form-highlight-background-color);
+    content:"";
+    position:absolute;
+    pointer-events:none;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border-radius:6px;
+    opacity:0.0;       /*1.0 for selecting */
+    border:1px solid var(--mon-form-highlight-background-color);
+}
+
+.palette_cell[data-cw="phone_port"] {
+    display: inline-block;
+}
+
+.palette_cell.bar {
+    padding-left:0;
+    padding-right:0;
+}
+.palette_cell.bar:last-child {
+    padding-right:var(--mon-form-cell-padding-right);
+}
+
+.palette_cell.bar:first-child {
+    padding-left:var(--mon-form-cell-padding-left);
+
+}
+
+.palette_cell.radio, .palette_cell.checkbox {
+    display:flex;
+    white-space:nowrap;
+}
+
+.palette_cell.textfield {
+    display:flex;
+}
+
+.palette_cell.slider {
+    display:flex;
+}
+
+.palette_cell.right {
+    justify-content:flex-end;
+    ifloat:right;
+}
+
+.palette_cell.third {
+    flex: 0 0 33.3333%
+}
+
+.palette_description {
+    font-size:11px;
+    box-sizing:border-box;
+    iwidth:100%;
+
+    position:relative;
+    color:var(--mon-form-color);
+    line-height:12px;
+
+    padding-right:4px;
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:8px;
+
+    display:block;
+
+}
+
+.palette_header {
+    box-sizing:border-box;
+    font-size:12px;
+    width:100%;
+    xposition:relative;
+    color:var(--mon-form-color);
+    line-height:14px;
+	padding-left:var(--mon-form-cell-padding-left);
+	padding-right:var(--mon-form-cell-padding-right);
+	padding-top:var(--mon-form-cell-padding-top);
+	padding-bottom:var(--mon-form-cell-padding-bottom);
+	background-color: var(--mon-body-background-color);
+	border-bottom:1px solid rgba(0,0,0,.5);
+
+    ipadding-right:4px;
+    white-space:wrap;
+    display:block;
+    position:fixed;
+    top:0px;
+    left:0px;
+    margin:0px auto 0px 0px;
+    z-index:10000;
+
+}
+
+.palette_header[data-cw="phone_port"] {
+
+    padding-left:var(--mon-form-cell-mobile-padding-left);
+    padding-right:var(--mon-form-cell-mobile-padding-right);
+    padding-top:var(--mon-form-cell-mobile-padding-top);
+    padding-bottom:var(--mon-form-cell-mobile-padding-bottom);
+
+}
+
+.palette_text {
+    font-size:11px;
+    position:relative;
+    color:var(--mon-form-color);
+    line-height:14px;
+    padding-right:5px;
+    padding-left:5px;
+    display:inline-flex;
+    font-weight:normal;
+    text-align
+
+}
+
+input[type=text] + .palette_text {
+    min-width:50px;
+}
+
+input[type=checkbox] + .palette_text, input[type=radio] + .palette_text {
+    ifont-size: calc(100% - 2px);
+    position: relative;
+    height: calc(100% - 2px);
+    color: var(--mon-form-color);
+    line-height: calc(100% - 2px);
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0px;
+    top:0px;
+    display: inline-flex;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.palette_title {
+    font-size:12px;
+    position:relative;
+    color:var(--mon-form-color);
+    line-height:14px;
+    padding-right:5px;
+    padding-left:5px;
+    display:inline-flex;
+
+}
+
+.palette_inner {
+    display:inline-flex;
+    margin-left:auto;
+    margin-right:auto;
+    iwidth:100%;
+    //background-color:rgba(255,0,0,.2);
+
+}
+
+.palette_inner[data-cw="phone_port"] {
+    display:inline-flex;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+    //background-color:rgba(255,0,0,.2);
+
+}

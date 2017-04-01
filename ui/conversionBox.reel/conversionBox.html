@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="conversionBox.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                },
+                "bindings": {
+                }
+            },
+
+            "icon": {
+                "prototype": "montage/ui/image.reel",
+                "properties": {
+                    "element": {"#": "icon"}
+                },
+                "bindings": {
+                    "src": {"<-": "@owner.icon"}
+                }
+            },
+
+            "coin": {
+                "prototype": "ui/coin.reel",
+                "properties": {
+                    "element": {"#": "coin"}
+                },
+                "bindings": {
+                    "currencyName": {"<-": "@owner.coin"},
+                    "symbol": {"<-": "@owner.symbol"},
+                    "countryName": {"<-": "@owner.countryName"}
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="light" class="conversionBox">
+        <img data-montage-id="icon" class="icon boxflag" ></img>
+		<div data-montage-id="coin" class="boxcoin" ></div>
+
+    </div>
+</body>
+</html>

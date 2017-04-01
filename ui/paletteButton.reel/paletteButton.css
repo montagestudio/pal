@@ -1,0 +1,328 @@
+.dashed {
+    border:2px dashed orange;
+    border-radius:calc(50%);
+
+
+}
+
+xinput[type=button]:active {
+    background: var(--form_button_background_color--active);
+
+}
+
+xinput[type=button]:focus {
+
+    //-webkit-appearance:var(--form_button_appearance--focus);
+    //border-width: var(--form_button_border_width--focus);
+    //border-style: var(--form_button_border_style--focus);
+
+    border-color: var(--form_focus_shadow_color);
+    xbox-shadow: var(--form_focus_shadow);
+    //z-index: var(--form_focus_z_index);
+    //border-radius: var(--form_button_border_radius--focus);
+
+    xoutline: var(--form_button_outline);
+
+    outline-color: var(--form_button_ouline_color_focus);
+    outline-width: var(--form_button_outlien_width_focus);
+    outline-style: var(--form_button_outline_style_focus);
+    xoutline:none;
+
+}
+
+.scaled {
+    transform-origin:50% 50%;
+    transform:translate(7px, 7px) scale(.86);
+}
+
+.hidden {
+    idisplay:none;
+
+}
+
+.paletteButtonPalette {
+    iheight:100px;
+    ibackground:red;
+}
+
+.button.left svg {
+    margin-top: 1px;
+    margin-right: .25em;
+    margin-bottom:1px;
+    max-height: 1.4em;
+    max-width: 1.4em;
+    vertical-align: middle;
+}
+
+.button.top svg {
+    margin-top: 4px;
+    margin-bottom:3px;
+    xmargin-right: .25em;
+    max-height: 1.4em;
+    max-width: 1.4em;
+    vertical-align: middle;
+    xdisplay:block;
+}
+
+.button.right svg {
+    margin-top: 4px;
+    margin-bottom:3px;
+    xmargin-right: .25em;
+    max-height: 1.4em;
+    max-width: 1.4em;
+    vertical-align: middle;
+    xdisplay:block;
+}
+
+.button.left {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:no-wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    text-align:center;
+    padding:4px 10px;
+}
+
+.button.top {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    text-align:center;
+    padding:4px;
+}
+
+.button.right {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:no-wrap;
+    justify-content:space-between;
+    align-items:center;
+    align-content:space-between;
+    padding:4px 10px;
+}
+
+
+
+input[type=button], button, .button {
+    white-space:pre;
+    -webkit-user-select:none;
+    font-size: var(--mon-button-font-size);
+    box-sizing: border-box;
+    box-shadow: var(--mon-button-box-shadow);
+
+    padding-top: var(--mon-button-padding-top);
+    padding-right: var(--mon-button-padding-right);
+    padding-bottom: var(--mon-button-padding-bottom);
+    padding-left: var(--mon-button-padding-left);
+
+    margin-top: var(--mon-button-margin-top);
+    margin-right: var(--mon-button-margin-right);
+    margin-bottom: var(--mon-button-margin-bottom);
+    margin-left: var(--mon-button-margin-left);
+
+    xborder-color: inherit;
+    xbackground-color:red;
+
+    background:var(--mon-button-background);
+    border-width: var(--mon-button-border-width);
+    border-style: var(--mon-button-border-style);
+    border-color: var(--mon-button-border-color);
+    border-image:initial;
+
+    border-top-color: var(--mon-button-border-top-color);
+    border-right-color: var(--mon-button-border-right-color);
+    border-bottom-color: var(--mon-button-border-bottom-color);
+    border-left-color: var(--mon-button-border-left-color);
+
+    border-top-style: var(--mon-button-border-top-style);
+    border-right-style: var(--mon-button-border-right-style);
+    border-bottom-style: var(--mon-button-border-bottom-style);
+    border-left-style: var(--mon-button-border-left-style);
+
+    border-top-width: var(--mon-button-border-top-width);
+    border-right-width: var(--mon-button-border-right-width);
+    border-bottom-width: var(--mon-button-border-bottom-width);
+    border-left-width: var(--mon-button-border-left-width);
+
+   	outline-color: var(--mon-button-outline-color);
+	outline-width: var(--mon-button-outline-width);
+	outline-style: var(--mon-button-outline-style);
+	outline-offset: var(--mon-button-outline-offset);
+
+    color: var(--mon-button-color);
+    xbackground: var(--mon-button-background);
+
+    border-top-left-radius: var(--mon-button-border-top-left-radius);
+    border-top-right-radius: var(--mon-button-border-top-right-radius);
+    border-bottom-left-radius: var(--mon-button-border-bottom-left-radius);
+    border-bottom-right-radius: var(--mon-button-border-bottom-right-radius);
+
+    x-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    xtransform: translate(0px, 0px);
+    xtransition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    -webkit-font-smoothing: antialiased;
+
+    font-family: var(--mon-button-font-family);
+    cursor: var(--mon-button-cursor);
+
+    -webkit-appearance: button;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=button]:active, button:active, .button:active {
+
+    border-top-style: var(--mon-button-border-top-style--active);
+    border-right-style: var(--mon-button-border-right-style--active);
+    border-bottom-style: var(--mon-button-border-bottom-style--active);
+    border-left-style: var(--mon-button-border-left-style--active);
+    transition: all .4s ease-in;
+    x:cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+    outline-color: var(--mon-button-outline-color--active);
+    outline-style: var(--mon-button-outline-style--active);
+    outline-width: var(--mon-button-outline-width--active);
+    outline-offset: var(--mon-button-outline-offset--active);
+
+    color: var(--mon-button-color--active);
+
+    background: var(--mon-button-background--active) !important;
+    box-shadow: var(--mon-button-box-shadow--active);
+
+}
+
+input[type=button]:focus, button:focus, .button:focus {
+    outline-color: var(--mon-button-outline-color--focus);
+    outline-style: var(--mon-button-outline-style--focus);
+    outline-width: var(--mon-button-outline-width--focus);
+    outline-offset: var(--mon-button-outline-offset--focus);
+    color: var(--mon-button-color--focus);
+
+    box-shadow: var(--mon-button-box-shadow--focus);
+}
+
+input[type=button]:hover, button:hover, .button:hover {
+    outline-color: var(--mon-button-outline-color--hover);
+    outline-style: var(--mon-button-outline-style--hover);
+    outline-width: var(--mon-button-outline-width--hover);
+    outline-offset: var(--mon-button-outline-offset--hover);
+    background: var(--mon-button-background--hover);
+
+    box-shadow: var(--mon-button-box-shadow--hover);
+    color: var(--mon-button-color--hover);
+}
+
+input[type=button]:disabled, button:disabled, .button:disabled {
+    opacity:.5;
+}
+
+.button.plain {
+    border:0;
+    border-bottom:1px solid rgba(0,0,0,.2);
+    background:none;
+    box-shadow:none;
+
+}
+
+.palette_cell:last-child .button.plain {
+    border:0;
+}
+
+
+.button.full {
+    width:100%;
+    xborder-width:.1px;
+    margin-bottom:1px;
+
+
+}
+
+.button.wide {
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+
+
+.xbutton:focus {
+    //border:1px solid red;
+    //border-radius:5px;
+   // box-shadow: var(--form_focus_shadow);
+    border-radius: var(--form_button_border_radius--focus);
+    -webkit-appearance: var(--form_button_appearance--focus);
+    xborder: var(--form_button_border--focus);
+
+    border-width: var(--form_button_border_width--focus);
+    border-style: var(--form_button_border_style--focus);
+    border-color: var(--form_button_border_color--focus);
+
+    outline-color: var(--form_button_ouline_color--focus);
+    outline-width: var(--form_button_outline_width--focus);
+    outline-style: var(--form_button_outline_style--focus);
+    outline-offset: var(--form_button_outline_offset--focus);
+    outline:none;
+
+    box-shadow: var(--form_focus_shadow);//
+    z-index: var(--form_focus_z_index);//1000
+}
+
+.button.wide.bar_left {
+    width:calc(100%);
+    //border-right-color:transparent;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+}
+.button.wide.bar_center {
+    width:calc(100%);
+    border-radius:0;
+    border-top-right-color:transparent;
+    border-bottom-right-color:transparent;
+}
+.button.wide.bar_right {
+    width:calc(100%);
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
+
+.xbutton:active {
+    background-color:rgba(0,0,0,.03);
+    //transform-origin:50% 50%;
+    //width:calc(100% - 2px);
+    background-color: var(--form_button_background_color--active);
+    padding: var(--form_button_padding);
+    margin: var(--form_button_margin):
+
+    //padding:3px 7px;
+    //margin:1px 1px;
+    //position:relative;
+    //left:2px;
+    cursor: pointer;
+}
+.xbutton:hover {
+    cursor: pointer;
+}
+
+.ibutton.montage--active {
+    background: #DDD;
+    color: white;
+}
+
+.button.custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ibutton.montage--pending {
+    background:red;
+}
+

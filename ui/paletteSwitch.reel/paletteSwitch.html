@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>PaletteSwitch</title>
+
+    <link rel="stylesheet" type="text/css" href="paletteSwitch.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik+One|Heebo:400,800,900' rel='stylesheet' type='text/css'>
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "paletteSwitch"}
+                }
+            },
+            "checkbox1": {
+                "prototype": "montage/ui/checkbox.reel",
+                "properties": {
+                    "element": {"#": "checkbox1"}
+                }
+            },
+            "checkbox1b": {
+                "prototype": "montage/ui/checkbox.reel",
+                "properties": {
+                    "element": {"#": "checkbox1b"}
+                }
+            },
+            "checkbox3": {
+                "prototype": "montage/ui/checkbox.reel",
+                "properties": {
+                    "element": {"#": "checkbox3"}
+                }
+            },
+            "checkbox2": {
+			                "prototype": "montage/ui/checkbox.reel",
+			                "properties": {
+			                    "element": {"#": "checkbox2"}
+			                }
+            },
+            "radio1": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio1"}
+			                }
+            },
+            "radio2": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio2"}
+			                }
+            },
+            "radio3": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio3"}
+			                }
+            },
+            "radio1b": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio1b"}
+			                }
+            },
+            "radio2b": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio2b"}
+			                }
+            },
+            "radio3b": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio3b"}
+			                }
+            },
+            "radio1c": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio1c"}
+			                }
+            },
+            "radio2c": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio2c"}
+			                }
+            },
+            "radio3c": {
+			                "prototype": "montage/ui/radio.reel",
+			                "properties": {
+			                    "element": {"#": "radio3c"}
+			                }
+            }
+        }
+    </script>
+</head>
+
+<script type="text/javascript">
+function changer(t) {
+
+       var target = t;
+       while(target.nodeName != "OBJECT") target = target.previousSibling;
+
+       target = target.contentDocument.firstElementChild;
+
+             var path = target.getElementById("pathy");
+             if (t.checked) {
+                 path.classList.add('dashon');
+                 path.classList.remove('dashoff');
+             } else {
+                 path.classList.add('dashoff');
+                 path.classList.remove('dashon');
+             }
+
+
+}
+
+</script>
+
+<body>
+    <div data-montage-id="paletteSwitch" class="palette_group">
+
+        <div class="palette_title">SWITCHES</div>
+
+
+        <div class="palette_row">
+			 <label class="palette_cell checkbox">
+				 <input type="checkbox" class='mcheckbox'/><div class='palette_text'>Input Checkbox</div>
+			 </label>
+        </div>
+
+        <div class="palette_row">
+             <label class="palette_cell checkbox">
+                 <input type="checkbox" data-montage-id="checkbox3" class="mcheckbox" />
+			     <div class='palette_text'>Montage Check</div>
+			 </label>
+        </div>
+
+        <div class="palette_row">
+             <label class="palette_cell checkbox">
+                 <object type="image/svg+xml" data="ui/paletteSwitch.reel/svg_switch_check_scribble2i.svg" class="mcheckbox"></object>
+                 <input type="checkbox" data-montage-id="checkbox1" class="checkbox_checkbox_element" onchange="changer(this)"  style=''/>
+			     <div class='palette_text'>Montage Check</div>
+			 </label>
+        </div>
+
+        <div class="palette_row">
+             <label class="palette_cell checkbox">
+                 <object type="image/svg+xml" data="ui/paletteSwitch.reel/svg_switch_check_scribble2i.svg" class="mcheckbox"></object>
+                 <input type="checkbox" data-montage-id="checkbox1b" class="checkbox_checkbox_element" onchange="changer(this)"  style=''/>
+			     <div class='palette_text'>Montage Check</div>
+			 </label>
+        </div>
+
+        <div class="palette_row">
+			 <label class="palette_cell">
+				 <div data-montage-id="checkbox2" class=""></div><div class='palette_text'>Montage Check2</div>
+			 </label>
+        </div>
+
+        <div class="palette_row fullcenter">
+			 <label class="palette_cell radio">
+			     <input type="radio" data-montage-id="radio1" class="mradio"  name="val1" value="r0" /><div class='palette_text'>Radio 1</div>
+			 </label>
+			 <label class="palette_cell radio">
+			     <input type="radio" data-montage-id="radio2" class="mradio" name="val1" value="r1" /><div class='palette_text'>Radio 2</div>
+			 </label>
+			 <label class="palette_cell radio">
+			     <input type="radio" data-montage-id="radio3" class="mradio"  name="val1" value="r2" /><div class='palette_text'>Radio 3</div>
+			 </label>
+        </div>
+
+        <div class="palette_row full">
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio1b" class="mradio"  name="val2" value="r0" /><div class='palette_text'>Radio 1b</div>
+			 </label>
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio2b" class="mradio" name="val2" value="r1" /><div class='palette_text'>Radio 2b</div>
+			 </label>
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio3b" class="mradio"  name="val2" value="r2" /><div class='palette_text'>Radio 3b</div>
+			 </label>
+        </div>
+        <div class="palette_row">
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio1c" class="mradio"  name="val2" value="r0" /><div class='palette_text'>Radio 1b</div>
+			 </label>
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio2c" class="mradio" name="val2" value="r1" /><div class='palette_text'>Radio 2b</div>
+			 </label>
+			 <label class="palette_cell radio">
+				 <input type="radio" data-montage-id="radio3c" class="mradio"  name="val2" value="r2" /><div class='palette_text'>Radio 3b</div>
+			 </label>
+        </div>
+
+
+	</div>
+</body>
+</html>

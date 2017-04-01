@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="skins.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="palette.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                },
+                "bindings": {
+                }
+            },
+            "pb": {
+                "prototype": "ui/paletteButton.reel",
+                "properties": {
+                    "element": {"#": "pb"}
+                }
+            },
+            "ps": {
+                "prototype": "ui/paletteSwitch.reel",
+                "properties": {
+                    "element": {"#": "ps"}
+                }
+            },
+            "pt": {
+                "prototype": "ui/paletteTextfield.reel",
+                "properties": {
+                    "element": {"#": "pt"}
+                }
+            },
+            "pta": {
+                "prototype": "ui/paletteTextarea.reel",
+                "properties": {
+                    "element": {"#": "pta"}
+                }
+            },
+            "psl": {
+                "prototype": "ui/paletteSlider.reel",
+                "properties": {
+                    "element": {"#": "psl"}
+                }
+            },
+            "pro": {
+                "prototype": "ui/paletteProgress.reel",
+                "properties": {
+                    "element": {"#": "pro"}
+                }
+            },
+            "pse": {
+                "prototype": "ui/paletteSelect.reel",
+                "properties": {
+                    "element": {"#": "pse"}
+                }
+            },
+            "pnu": {
+                "prototype": "ui/paletteNumber.reel",
+                "properties": {
+                    "element": {"#": "pnu"}
+                }
+            },
+            "psb": {
+                "prototype": "ui/paletteBar.reel",
+                "properties": {
+                    "element": {"#": "psb"}
+                }
+            },
+            "pda": {
+                "prototype": "ui/paletteDate.reel",
+                "properties": {
+                    "element": {"#": "pda"}
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+    function searchit(input) {
+        widgets = [{id:"pb",keys:"button"},
+        {id:"ps",keys:"switch:radio"},
+        {id:"pt",keys:"textfield"},
+        {id:"pta",keys:"textarea"},
+        {id:"psl",keys:"slider"},
+        {id:"pro",keys:"progress"},
+        {id:"pse",keys:"select"},
+        {id:"pnu",keys:"number"},
+        {id:"psb",keys:"bar"},
+        {id:"pda",keys:"date"}
+        ];
+
+        for (var a = 0; a  < widgets.length; a++) {
+            var hit = 0;
+            if (input.value == "" || input.value.length == 0) hit = 1;
+            else if (widgets[a].keys.indexOf(input.value) != -1) hit = 1;
+
+            if (hit) document.getElementById(widgets[a].id).style.display = "block";
+            else document.getElementById(widgets[a].id).style.display = "none";
+
+        }
+    }
+
+    function skinit(val) {
+        var m = document.getElementById("main");
+        m.classList.remove("native");
+        m.classList.remove("default");
+        m.classList.remove("material");
+        m.classList.remove("dark");
+
+        switch (val) {
+            case "native" :
+                m.classList.add("native");
+                break;
+            case "default" :
+                m.classList.add("native");
+                m.classList.add("default");
+                break;
+            case "dark" :
+                m.classList.add("native");
+                m.classList.add("default");
+                m.classList.add("dark");
+            case "material" :
+                m.classList.add("native");
+                m.classList.add("material");
+                break;
+        }
+
+    }
+
+    </script>
+</head>
+<body>
+    <div id=main data-montage-id="main" data-montage-skin="light" class="Main default_skin">
+        <div class='palette_header'><span style="font-size:10px;">MONTAGE PALETTE</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type=text onkeyup="searchit(this)" style="font-size:10px;height:14px;width:60px;" /><div style='float:right;font-size:10px;'>Skin: <select onchange="skinit(this.options[this.selectedIndex].value)" style="font-size:10px;"><option value="native" ">Native</option><option value="default" ">Default</option><option value="dark">Dark</option><option value="material">Material</option></select></div></div>
+        <br style='clear:both;'/>
+        <div>
+			<div id="pb" data-montage-id="pb" class="paletteButton" style="">
+
+			</div>
+			<div id="ps" data-montage-id="ps" class="paletteSwitch" style="">
+
+			</div>
+			<div id="pt" data-montage-id="pt" class="paletteTextfield" style="">
+
+			</div>
+			<div id="pta" data-montage-id="pta" class="paletteTextarea" style="">
+
+			</div>
+			<div id="psl" data-montage-id="psl" class="paletteSlider" style="">
+
+			</div>
+			<div id="pro" data-montage-id="pro" class="paletteProgress" style="">
+
+			</div>
+			<div id="pse" data-montage-id="pse" class="paletteSelect" style="">
+
+			</div>
+			<div id="pnu" data-montage-id="pnu" class="paletteNumber" style="">
+
+			</div>
+			<div id="psb" data-montage-id="psb" class="paletteBar" style="">
+
+			</div>
+			<div id="pda" data-montage-id="pda" class="paletteDate" style="">
+
+			</div>
+        </div>
+    </div>
+
+</body>
+</html>
